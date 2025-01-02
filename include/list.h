@@ -7,6 +7,12 @@ struct ListNode {
 };
 
 struct ListNode* createNote(int data);
-int findNode(struct ListNode*, int value);
+struct ListNode* findNode(struct ListNode* node, int value);
+void insertHead(struct ListNode** head, int value);
+void insertTail(struct ListNode** tail, int value);
+void removeNode(struct ListNode** node, int value);
+int getValue(struct ListNode* node, int value);
+
+
 
 #endif
