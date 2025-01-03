@@ -11,3 +11,17 @@
 	}
 	return newList;
 }
+
+ListNode* createNode(int value) {
+	ListNode* newNode = malloc(sizeof(ListNode));
+	if (newNode != NULL) {
+		newNode->value = value;
+		newNode->next = NULL;
+	}
+
+	return newNode;
+}
+
+void insertHead(List* list, ListNode** head, int value) {
+		
+}
