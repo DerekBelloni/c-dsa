@@ -22,6 +22,23 @@ ListNode* createNode(int value) {
 	return newNode;
 }
 
-void insertHead(List* list, ListNode** head, int value) {
-		
+int insertHead(List* list, ListNode** head, int value) {
+	if (list == NULL) {
+		return -1;
+	}	
+
+	if (head == NULL) {
+		return -1;
+	}
+
+	if (list->size == 0) {
+		list->size++;
+		list->head = head;
+		list->tail = head;
+	}
+
+	if (list->size > 0) {
+		head->next = list->head->next;
+		list->head = head;
+	}
 }
