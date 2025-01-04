@@ -7,5 +7,8 @@ int main() {
 	printf("List size: %i\n", newList->size);
 	ListNode* newNode = createNode(5);
 	printf("List Node Value: %i\n", newNode->value);
+	insertHead(newList, newNode);
+	ListNode* head = getHead(newList);
+	printf("List Head Value: %i\n", head->value);
 	return 0;
 }

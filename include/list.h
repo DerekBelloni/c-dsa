@@ -15,9 +15,13 @@ typedef struct List {
 List* createList();
 ListNode* createNode(int value);
 ListNode* findNode(ListNode* node, int value);
-int insertHead(List* list, ListNode** head, int value);
-void insertTail(ListNode** tail, int value);
-void removeNode(ListNode** node, int value);
-int getValue(ListNode* node, int value);
-
+int insertHead(List* list, ListNode* head);
+void insertTail(List* list, ListNode* tail);
+void removeNode(int value);
+int getValue(ListNode* node);
+ListNode* getHead(List* list);
+// add methods for:
+// print list
+// get size
+// delete list
 #endif
