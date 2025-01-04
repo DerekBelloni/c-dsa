@@ -45,13 +45,55 @@ int insertHead(List* list, ListNode* head) {
 	return 0;
 }
 
+int insertTail(List* list, ListNode* tail) {
+	if (list == NULL) {
+		return -1;
+	}
+
+	if (tail == NULL) {
+		return -1;
+	}
+
+	if (list->size == 0) {
+		list->size++;
+		list->tail = tail;
+		list->head = tail;
+		tail->next = NULL;
+	} else {
+		list->size++;
+		list->tail->next = tail;
+		list->tail = tail;
+	}
+
+	return 0;
+}
+
 ListNode* getHead(List* list) {
 	if (list == NULL) return NULL;
 
 	ListNode* head = list->head;
 	return head;
-} 
+}
 
+ListNode* getTail(List* list) {
+	if (list == NULL) return NULL;
+
+	ListNode* tail = list->tail;
+	return tail;
+}
+
+int printList(List* list) {
+	if (list == NULL) return -1;
+
+	ListNode* curr = list->head;
+	
+	while(curr) {
+		printf("Current node value: %i\n", curr->value);
+		curr = curr->next;
+	}
+
+	return 0;
+}
 
 
 
