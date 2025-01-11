@@ -68,6 +68,10 @@ int insertTail(List* list, ListNode* tail) {
 	return 0;
 }
 
+int removeNode(int value) {
+
+}
+
 ListNode* getHead(List* list) {
 	if (list == NULL) return NULL;
 
