@@ -28,6 +28,10 @@ int main() {
 	insertTail(newList, tailNode2);
 	insertTail(newList, tailNode3);
 	printList(newList);
+	
+	ListNode* foundNode = findNode(newList, 12);
+	printf("Found Node for Value 12: %d", foundNode->value);
+
 
 	return 0;
 }

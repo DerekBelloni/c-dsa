@@ -68,9 +68,7 @@ int insertTail(List* list, ListNode* tail) {
 	return 0;
 } 
 
-ListNode* findNode(int value) {
-	if (value == NULL) return NULL;
-	
+ListNode* findNode(List* list, int value) {
 	ListNode* curr = list->head;
 
 	while(curr) {
@@ -83,8 +81,8 @@ ListNode* findNode(int value) {
 	return NULL;
 }
 
-int removeNode(int value) {
-
+int removeNode(List* list, int value) {
+	return 0;
 }
 
 ListNode* getHead(List* list) {
