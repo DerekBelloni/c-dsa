@@ -66,6 +66,21 @@ int insertTail(List* list, ListNode* tail) {
 	}
 
 	return 0;
+} 
+
+ListNode* findNode(int value) {
+	if (value == NULL) return NULL;
+	
+	ListNode* curr = list->head;
+
+	while(curr) {
+		if (curr->value == value) {
+			return curr;
+		} else {
+			curr = curr->next;
+		}
+	}
+	return NULL;
 }
 
 int removeNode(int value) {
