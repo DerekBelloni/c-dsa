@@ -33,6 +33,7 @@ int main() {
 	printf("Found Node for Value 12: %d", foundNode->value);
 	
 	int removedNodeValue = removeNode(newList, 3);
-	printf("Removed Node Position 3 Value: %d\n", removedNodeValue);
+	free(newList);
+	free(newNode);
 	return 0;
 }
