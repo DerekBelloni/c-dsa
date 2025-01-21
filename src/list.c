@@ -82,6 +82,15 @@ ListNode* findNode(List* list, int value) {
 }
 
 int removeNode(List* list, int value) {
+	ListNode* foundNode = findNode(list, value);
+	ListNode* curr = list->head;
+
+	while (curr) {
+		if (curr->value === value) {
+			
+		}
+	}
+	
 	return 0;
 }
 
