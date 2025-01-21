@@ -81,16 +81,30 @@ ListNode* findNode(List* list, int value) {
 	return NULL;
 }
 
-int removeNode(List* list, int value) {
-	ListNode* foundNode = findNode(list, value);
-	ListNode* curr = list->head;
+int removeNode(List* list, int position) {
+	ListNode* temp = list->head;
+	ListNode* prev = NULL;
 
-	while (curr) {
-		if (curr->value === value) {
-			
-		}
+	if (position == 1) {
+		int headValue = list->head->value;
+		list->head = temp->next;
+		free(temp);
+		return headValue;
 	}
-	
+
+	for (int i = 1; i < position && temp != NULL; i++) {
+		prev = temp;
+		temp = temp->next;
+	}
+
+	if (temp != NULL) {
+		int foundValue = temp->value;
+		prev->next = temp->next;
+		free(temp);
+		return foundValue;
+	}
+
+
 	return 0;
 }
 
