@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../include/list.h"
 
 int main() {
@@ -30,9 +31,13 @@ int main() {
 	printList(newList);
 	
 	ListNode* foundNode = findNode(newList, 12);
-	printf("Found Node for Value 12: %d", foundNode->value);
+	printf("Found Node for Value 12: %d\n", foundNode->value);
 	
 	int removedNodeValue = removeNode(newList, 3);
+
+	int listSize = getSize(newList);
+	printf("List Size: %d\n", listSize);
+
 	free(newList);
 	free(newNode);
 	return 0;

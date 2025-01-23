@@ -136,18 +136,14 @@ int printList(List* list) {
 }
 
 int getSize(List* list) {
-	if (list == NULL) return -1;
+	if (list == NULL) return 0;
 
 	int size = 0;
 	ListNode* curr = list->head;
 	
-	if (curr == NULL) return size;
-
 	while (curr) {
 		size++;
-		if (curr->next) {
-			curr = curr->next;
-		}
+		curr = curr->next;
 	}
 
 	return size;
