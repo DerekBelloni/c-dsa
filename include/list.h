@@ -17,12 +17,15 @@ ListNode* createNode(int value);
 ListNode* findNode(List* list, int value);
 int insertHead(List* list, ListNode* head);
 int insertTail(List* list, ListNode* tail);
+int insertNode(List* list, ListNode* node, int position);
 int removeNode(List* list, int position);
 int getValue(ListNode* node);
 ListNode* getHead(List* list);
 ListNode* getTail(List* list);
 int printList(List* list);
 int getSize(List* list);
+
+
 // add methods for:
 // get size
 // delete list
