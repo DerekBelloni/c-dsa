@@ -22,7 +22,7 @@ int getValue(ListNode* node);
 ListNode* getHead(List* list);
 ListNode* getTail(List* list);
 int printList(List* list);
-
+int getSize(List* list);
 // add methods for:
 // get size
 // delete list
