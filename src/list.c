@@ -151,5 +151,33 @@ int getSize(List* list) {
 
 
 int insertNode(List* list, ListNode* node, int position) {
-	
+	if (list == NULL) return 0;
+
+	ListNode* newNode = node;
+	ListNode* curr = list->head;
+	ListNode* prev = NULL;
+
+	if (position <= 0 || position > list->size + 1) {
+		return 0;
+	}
+
+	if (position == 1) {
+		newNode->next = list->head;
+		list->head = newNode;
+		list->size++;
+		return 1;	
+	}
+
+	for (int i = 1; i < position; i++) {
+		prev = curr;
+		curr = curr->next;
+	}
+
+	prev->next = newNode;
+	newNode->next = curr;
+	list->size++;
+	if (curr == NULL) {
+		list->tail = newNode;
+	}
+	return 1;
 }
