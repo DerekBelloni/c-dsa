@@ -150,4 +150,6 @@ int getSize(List* list) {
 }
 
 
-
+int insertNode(List* list, ListNode* node, int position) {
+	
+}
