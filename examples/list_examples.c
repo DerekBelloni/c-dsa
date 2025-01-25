@@ -38,7 +38,15 @@ int main() {
 	int listSize = getSize(newList);
 	printf("List Size: %d\n", listSize);
 
+	ListNode* additionalNode = createNode(64);
+	printf("Additonal Node Value: %d\n", additionalNode->value);
+	insertNode(newList, additionalNode, 3);
+	
+	ListNode* additionalFoundNode = findNode(newList, 64);
+	printf("Additional Node Found By Position, Value: %d\n", additionalFoundNode->value);
+
 	free(newList);
 	free(newNode);
+	free(additionalNode);
 	return 0;
 }
