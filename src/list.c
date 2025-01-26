@@ -181,3 +181,27 @@ int insertNode(List* list, ListNode* node, int position) {
 	}
 	return 1;
 }
+
+
+int deleteList(List* list) {
+	if (list == NULL) return 0;
+
+	ListNode* curr = list->head;
+	ListNode* next = NULL;
+	
+	if (list->size == 1) {
+		free(list->head);
+		list->head = NULL;
+		list->tail = NULL;
+		return 0;
+	}
+
+	while (curr) {
+		next = curr->next;
+		free(curr);
+		curr = next;
+	}
+	
+	free(list);
+	return 0;
+}

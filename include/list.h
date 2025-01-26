@@ -13,6 +13,7 @@ typedef struct List {
 }List;
 
 List* createList();
+int deleteList();
 ListNode* createNode(int value);
 ListNode* findNode(List* list, int value);
 int insertHead(List* list, ListNode* head);
@@ -26,7 +27,5 @@ int printList(List* list);
 int getSize(List* list);
 
 
-// add methods for:
-// get size
 // delete list
 #endif
