@@ -190,9 +190,11 @@ int deleteList(List* list) {
 	ListNode* next = NULL;
 	
 	if (list->size == 1) {
-		free(list->head);
 		list->head = NULL;
 		list->tail = NULL;
+		list->size = 0;
+		free(curr);
+		free(list);
 		return 0;
 	}
 
@@ -202,6 +204,10 @@ int deleteList(List* list) {
 		curr = next;
 	}
 	
+	list->head = NULL;
+	list->tail = NULL;
+	list->size = 0;
 	free(list);
 	return 0;
+
 }
