@@ -16,7 +16,7 @@ List* createList();
 int deleteList(List* list);
 ListNode* createNode(int value);
 ListNode* findNode(List* list, int value);
-hnt insertHead(List* list, ListNode* head);
+int insertHead(List* list, ListNode* head);
 int insertTail(List* list, ListNode* tail);
 int insertNode(List* list, ListNode* node, int position);
 int removeNode(List* list, int position);
