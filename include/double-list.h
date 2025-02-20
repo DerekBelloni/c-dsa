@@ -5,7 +5,7 @@ typedef struct ListNode {
 	int value;
 	struct ListNode* next;
 	struct ListNode* prev;
-}
+} listNode;
 
 
 #endif
