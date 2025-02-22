@@ -2,11 +2,7 @@
 #include <stdlib.h>
 #include "../include/dynamic-array.h"
 
-DynamicArray* initializeArr() {
-	int numItems;
-	printf("Please provide the number of items needed to initialize the array\n");
-	scanf("%i", &numItems);
-
+DynamicArray* initializeArr(int numItems) {
 	DynamicArray* newArr = malloc(sizeof(DynamicArray));
 
 	if (newArr == NULL) {
@@ -26,5 +22,5 @@ DynamicArray* initializeArr() {
 }
 
 int append(int value) {
-	
+	return 0;	
 }

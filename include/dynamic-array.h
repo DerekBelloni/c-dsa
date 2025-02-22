@@ -7,7 +7,7 @@ typedef struct {
 	int capacity;
 } DynamicArray; 
 
-DynamicArray* initializeArr();
+DynamicArray* initializeArr(int numItems);
 int getValue(int index);
 int getSize();
 int append(int value);
