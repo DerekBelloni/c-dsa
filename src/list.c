@@ -209,5 +209,4 @@ int deleteList(List* list) {
 	list->size = 0;
 	free(list);
 	return 0;
-
 }
