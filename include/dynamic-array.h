@@ -10,7 +10,7 @@ typedef struct {
 DynamicArray* initializeArr(int numItems);
 int getValue(int index);
 int getSize();
-int append(int value);
+int append(DynamicArray* arr, int value);
 int pop();
 int insertAtIndex(int value, int index);
 int removeAtIndex(int index);

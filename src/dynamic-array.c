@@ -21,6 +21,20 @@ DynamicArray* initializeArr(int numItems) {
 	return newArr;
 }
 
-int append(int value) {
+int append(DynamicArray* newArr, int value) {
+	if (newArr == NULL) {
+		return -1;
+	}
+
+	if (value == NULL) {
+		return -1;
+	}
+	// need to compare the size to the capacity
+	if (newArr->size == newArr->capacity) {
+		// will replace with resize once written
+		return -1;
+	}
+
+
 	return 0;	
 }
