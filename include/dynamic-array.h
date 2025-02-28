@@ -1,6 +1,9 @@
 #ifndef DYNAMIC_ARRAY_H
 #define DYNAMIC_ARRAY_H
 
+#define EMPTY_VALUE -1
+
+
 typedef struct {
 	int *data;
 	int size;

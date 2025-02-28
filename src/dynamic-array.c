@@ -26,15 +26,17 @@ int append(DynamicArray* newArr, int value) {
 		return -1;
 	}
 
-	if (value == NULL) {
+	if (value == EMPTY_VALUE) {
 		return -1;
 	}
-	// need to compare the size to the capacity
+
 	if (newArr->size == newArr->capacity) {
 		// will replace with resize once written
 		return -1;
 	}
 
+	newArr->data[newArr->size] = value;
+	newArr->size++;
 
 	return 0;	
 }
