@@ -31,12 +31,29 @@ int append(DynamicArray* newArr, int value) {
 	}
 
 	if (newArr->size == newArr->capacity) {
-		// will replace with resize once written
-		return -1;
+		if (resize(newArr) != 0) return -1;
 	}
 
 	newArr->data[newArr->size] = value;
 	newArr->size++;
 
 	return 0;	
+}
+
+int resize(DynamicArray* newArr) {
+	size_t newCapacity = newArr->capacity * 2;
+	int* newData = (int*)malloc(newCapacity * sizeof(int));
+
+	if (newData == NULL) {
+		return -1;
+	}
+
+	for (size_t i = 0; i < newArr->capacity; i++) {
+		newData[i] = newArr->data[i];
+	}
+
+	newArr->capacity = newCapacity;
+	newArr->data = newData;
+
+	return 0;
 }
