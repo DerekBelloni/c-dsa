@@ -41,6 +41,8 @@ int append(DynamicArray* newArr, int value) {
 }
 
 int resize(DynamicArray* newArr) {
+	if (newArr == NULL) return -1;
+
 	size_t newCapacity = newArr->capacity * 2;
 	int* newData = (int*)malloc(newCapacity * sizeof(int));
 
@@ -54,6 +56,52 @@ int resize(DynamicArray* newArr) {
 
 	newArr->capacity = newCapacity;
 	newArr->data = newData;
+
+	return 0;
+}
+
+int pop(DynamicArray* newArr) {
+	if (newArr == NULL) return -1;
+
+	int removedVal = newArr->data[newArr->size - 1];
+
+	if (removedVal == EMPTY_VALUE) return EMPTY_VALUE;
+
+	newArr->size--;
+
+	return removedVal;	
+}
+
+int getValue(DynamicArray* newArr, int index) {
+	if (index < 0) return -1;
+
+	int retrievedValue = newArr->data[index];
+
+	if (retrievedValue == EMPTY_VALUE) return EMPTY_VALUE;
+
+	return retrievedValue;
+}
+
+int getSize(DynamicArray* newArr) {
+	if (newArr == NULL) {
+		return -1;
+	}	
+
+	int currentSize = newArr->size;
+
+	return currentSize;
+}
+
+int insertAtIndex(DynamicArray* newArr, int value, int index) {
+	if (newArr == NULL) return -1;
+
+	if (index < 0) return -1;
+
+	if (index >= newArr->size) { 
+		newArr->data[newArr->size] = value;
+		return 1;
+	}
+
 
 	return 0;
 }
