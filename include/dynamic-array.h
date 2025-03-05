@@ -18,7 +18,7 @@ int getSize(DynamicArray* arr);
 int append(DynamicArray* arr, int value);
 int pop(DynamicArray* arr);
 int insertAtIndex(DynamicArray* arr, int value, int index);
-int removeAtIndex(int index);
+int removeAtIndex(DynamicArray* arr, int index);
 int resize(DynamicArray* arr);
 int capacity(DynamicArray* arr);
 int printElements();

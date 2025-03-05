@@ -102,6 +102,32 @@ int insertAtIndex(DynamicArray* newArr, int value, int index) {
 		return 1;
 	}
 
+	if (newArr->size == newArr->capacity) {
+		if (resize(newArr) != 0) return -1;
+	}
+
+	int temp;
+
+	for (size_t i = newArr->size - 1; i >= index; i--) {
+		newArr->data[i+1] = newArr->data[1];
+		if (i == index) newArr->data[i] = value;
+	}
+
 
 	return 0;
+}
+
+int removeAtIndex(DynamicArray* newArr, int index) {
+	if (newArr == NULL) return -1;
+
+	if (index < 0) return -1;
+
+	int removedVal;
+	for (size_t i = index; i < newArr->size; i++) {
+		if (index == i) removedVal = newArr->data[i];	
+		newArr->data[i]	= newArr->data[i+1];
+	} 
+
+	newArr->size--;
+	return removedVal;
 }
